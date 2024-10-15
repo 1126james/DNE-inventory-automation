@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.7 on win32)" generated="20231218 17:25:26.336" rpa="false" schemaversion="4">
+<suite id="s1" name="Read Excel" source="C:\Users\James\Desktop\python\DNE\robotmaster\read_excel.robot">
+<test id="s1-t1" name="FirstTest" line="5">
+<kw name="Read Excel">
+<var>${username}</var>
+<arg>filepath=..\\test.xlsx</arg>
+<arg>sheetname=login</arg>
+<arg>rownum=2</arg>
+<arg>colnum=1</arg>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>${filepath}</arg>
+<arg>1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20231218 17:25:26.815" endtime="20231218 17:25:26.820"/>
+</kw>
+<kw name="Get Sheet" library="ExcelLibrary">
+<arg>${sheetname}</arg>
+<doc>Returns a page from the current document.</doc>
+<status status="PASS" starttime="20231218 17:25:26.820" endtime="20231218 17:25:26.821"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${data}</var>
+<arg>${rownum}</arg>
+<arg>${colnum}</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 17:25:26.821" level="INFO">${data} = Admin</msg>
+<status status="PASS" starttime="20231218 17:25:26.821" endtime="20231218 17:25:26.821"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20231218 17:25:26.821" endtime="20231218 17:25:26.821"/>
+</kw>
+<msg timestamp="20231218 17:25:26.821" level="INFO">${username} = Admin</msg>
+<status status="PASS" starttime="20231218 17:25:26.815" endtime="20231218 17:25:26.821"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 17:25:26.822" endtime="20231218 17:25:26.822"/>
+</kw>
+<kw name="Read Excel">
+<var>${password}</var>
+<arg>filepath=..\\test.xlsx</arg>
+<arg>sheetname=login</arg>
+<arg>rownum=2</arg>
+<arg>colnum=2</arg>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>${filepath}</arg>
+<arg>1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20231218 17:25:26.823" endtime="20231218 17:25:26.827"/>
+</kw>
+<kw name="Get Sheet" library="ExcelLibrary">
+<arg>${sheetname}</arg>
+<doc>Returns a page from the current document.</doc>
+<status status="PASS" starttime="20231218 17:25:26.828" endtime="20231218 17:25:26.828"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${data}</var>
+<arg>${rownum}</arg>
+<arg>${colnum}</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 17:25:26.829" level="INFO">${data} = admin123</msg>
+<status status="PASS" starttime="20231218 17:25:26.828" endtime="20231218 17:25:26.829"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20231218 17:25:26.829" endtime="20231218 17:25:26.829"/>
+</kw>
+<msg timestamp="20231218 17:25:26.829" level="INFO">${password} = admin123</msg>
+<status status="PASS" starttime="20231218 17:25:26.822" endtime="20231218 17:25:26.829"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 17:25:26.830" endtime="20231218 17:25:26.830"/>
+</kw>
+<status status="PASS" starttime="20231218 17:25:26.815" endtime="20231218 17:25:26.830"/>
+</test>
+<status status="PASS" starttime="20231218 17:25:26.338" endtime="20231218 17:25:26.832"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Read Excel">Read Excel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

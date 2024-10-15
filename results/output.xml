@@ -1,0 +1,4267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.7 on win32)" generated="20231218 19:00:54.382" rpa="false" schemaversion="4">
+<suite id="s1" name="Read Excel" source="C:\Users\James\Desktop\python\DNE\robotmaster\read_excel.robot">
+<test id="s1-t1" name="Test1" line="10">
+<kw name="Test the ExcelData">
+<kw name="Create List" library="BuiltIn">
+<var>${my_data_as_list_a}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231218 19:00:55.019" level="INFO">${my_data_as_list_a} = []</msg>
+<status status="PASS" starttime="20231218 19:00:55.019" endtime="20231218 19:00:55.019"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${my_data_as_list_b}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231218 19:00:55.020" level="INFO">${my_data_as_list_b} = []</msg>
+<status status="PASS" starttime="20231218 19:00:55.020" endtime="20231218 19:00:55.020"/>
+</kw>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>${path_excel}</arg>
+<arg>login</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20231218 19:00:55.020" endtime="20231218 19:00:55.028"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>108</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.029" level="INFO">${rownum} = 2</msg>
+<status status="PASS" starttime="20231218 19:00:55.028" endtime="20231218 19:00:55.029"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.030" level="INFO">${my_data_cola} = CE6881-48S6CQ-B</msg>
+<status status="PASS" starttime="20231218 19:00:55.030" endtime="20231218 19:00:55.030"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.031" level="INFO">${my_data_colb} = 102355984816</msg>
+<status status="PASS" starttime="20231218 19:00:55.030" endtime="20231218 19:00:55.031"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.031" endtime="20231218 19:00:55.032"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.032" endtime="20231218 19:00:55.032"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.028" endtime="20231218 19:00:55.032"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.034" level="INFO">${rownum} = 3</msg>
+<status status="PASS" starttime="20231218 19:00:55.032" endtime="20231218 19:00:55.034"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.035" level="INFO">${my_data_cola} = CC13UK300</msg>
+<status status="PASS" starttime="20231218 19:00:55.034" endtime="20231218 19:00:55.035"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.035" level="INFO">${my_data_colb} = N/A</msg>
+<status status="PASS" starttime="20231218 19:00:55.035" endtime="20231218 19:00:55.036"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.036" endtime="20231218 19:00:55.036"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.036" endtime="20231218 19:00:55.037"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.032" endtime="20231218 19:00:55.037"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.038" level="INFO">${rownum} = 4</msg>
+<status status="PASS" starttime="20231218 19:00:55.037" endtime="20231218 19:00:55.038"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.039" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.039" endtime="20231218 19:00:55.039"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.040" level="INFO">${my_data_colb} = ME222702790521</msg>
+<status status="PASS" starttime="20231218 19:00:55.039" endtime="20231218 19:00:55.040"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.040" endtime="20231218 19:00:55.041"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.041" endtime="20231218 19:00:55.041"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.037" endtime="20231218 19:00:55.041"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.043" level="INFO">${rownum} = 5</msg>
+<status status="PASS" starttime="20231218 19:00:55.042" endtime="20231218 19:00:55.043"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.043" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.043" endtime="20231218 19:00:55.044"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.044" level="INFO">${my_data_colb} = ME222702790128</msg>
+<status status="PASS" starttime="20231218 19:00:55.044" endtime="20231218 19:00:55.045"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.045" endtime="20231218 19:00:55.045"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.046" endtime="20231218 19:00:55.046"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.041" endtime="20231218 19:00:55.046"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.047" level="INFO">${rownum} = 6</msg>
+<status status="PASS" starttime="20231218 19:00:55.046" endtime="20231218 19:00:55.047"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.048" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.048" endtime="20231218 19:00:55.048"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.049" level="INFO">${my_data_colb} = ME222702790172</msg>
+<status status="PASS" starttime="20231218 19:00:55.048" endtime="20231218 19:00:55.049"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.049" endtime="20231218 19:00:55.050"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.050" endtime="20231218 19:00:55.051"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.046" endtime="20231218 19:00:55.051"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.052" level="INFO">${rownum} = 7</msg>
+<status status="PASS" starttime="20231218 19:00:55.051" endtime="20231218 19:00:55.052"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.053" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.052" endtime="20231218 19:00:55.053"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.054" level="INFO">${my_data_colb} = ME222702790087</msg>
+<status status="PASS" starttime="20231218 19:00:55.053" endtime="20231218 19:00:55.054"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.054" endtime="20231218 19:00:55.054"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.054" endtime="20231218 19:00:55.055"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.051" endtime="20231218 19:00:55.055"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.056" level="INFO">${rownum} = 8</msg>
+<status status="PASS" starttime="20231218 19:00:55.055" endtime="20231218 19:00:55.057"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.057" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.057" endtime="20231218 19:00:55.057"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.058" level="INFO">${my_data_colb} = ME222702790268</msg>
+<status status="PASS" starttime="20231218 19:00:55.058" endtime="20231218 19:00:55.058"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.059" endtime="20231218 19:00:55.059"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.059" endtime="20231218 19:00:55.060"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.055" endtime="20231218 19:00:55.060"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.061" level="INFO">${rownum} = 9</msg>
+<status status="PASS" starttime="20231218 19:00:55.060" endtime="20231218 19:00:55.061"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.062" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.061" endtime="20231218 19:00:55.062"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.063" level="INFO">${my_data_colb} = HM223400073772</msg>
+<status status="PASS" starttime="20231218 19:00:55.062" endtime="20231218 19:00:55.063"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.063" endtime="20231218 19:00:55.063"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.064" endtime="20231218 19:00:55.064"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.060" endtime="20231218 19:00:55.064"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.066" level="INFO">${rownum} = 10</msg>
+<status status="PASS" starttime="20231218 19:00:55.065" endtime="20231218 19:00:55.066"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.066" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.066" endtime="20231218 19:00:55.067"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.067" level="INFO">${my_data_colb} = HM223400072050</msg>
+<status status="PASS" starttime="20231218 19:00:55.067" endtime="20231218 19:00:55.067"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.068" endtime="20231218 19:00:55.068"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.068" endtime="20231218 19:00:55.069"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.064" endtime="20231218 19:00:55.069"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.071" level="INFO">${rownum} = 11</msg>
+<status status="PASS" starttime="20231218 19:00:55.069" endtime="20231218 19:00:55.071"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.072" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.071" endtime="20231218 19:00:55.072"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.072" level="INFO">${my_data_colb} = HM223400072048</msg>
+<status status="PASS" starttime="20231218 19:00:55.072" endtime="20231218 19:00:55.072"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.073" endtime="20231218 19:00:55.073"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.073" endtime="20231218 19:00:55.074"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.069" endtime="20231218 19:00:55.074"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.075" level="INFO">${rownum} = 12</msg>
+<status status="PASS" starttime="20231218 19:00:55.074" endtime="20231218 19:00:55.075"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.076" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.075" endtime="20231218 19:00:55.076"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.077" level="INFO">${my_data_colb} = HM223400073007</msg>
+<status status="PASS" starttime="20231218 19:00:55.076" endtime="20231218 19:00:55.077"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.077" endtime="20231218 19:00:55.077"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.077" endtime="20231218 19:00:55.077"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.074" endtime="20231218 19:00:55.078"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.079" level="INFO">${rownum} = 13</msg>
+<status status="PASS" starttime="20231218 19:00:55.078" endtime="20231218 19:00:55.079"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.080" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.079" endtime="20231218 19:00:55.080"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.081" level="INFO">${my_data_colb} = HM223400073013</msg>
+<status status="PASS" starttime="20231218 19:00:55.080" endtime="20231218 19:00:55.081"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.081" endtime="20231218 19:00:55.081"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.081" endtime="20231218 19:00:55.082"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.078" endtime="20231218 19:00:55.082"/>
+</iter>
+<iter>
+<var name="${i}">13</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.083" level="INFO">${rownum} = 14</msg>
+<status status="PASS" starttime="20231218 19:00:55.082" endtime="20231218 19:00:55.084"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.084" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.084" endtime="20231218 19:00:55.084"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.085" level="INFO">${my_data_colb} = HR221500011286</msg>
+<status status="PASS" starttime="20231218 19:00:55.085" endtime="20231218 19:00:55.085"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.085" endtime="20231218 19:00:55.086"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.086" endtime="20231218 19:00:55.087"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.082" endtime="20231218 19:00:55.087"/>
+</iter>
+<iter>
+<var name="${i}">14</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.088" level="INFO">${rownum} = 15</msg>
+<status status="PASS" starttime="20231218 19:00:55.087" endtime="20231218 19:00:55.088"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.089" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.089" endtime="20231218 19:00:55.089"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.090" level="INFO">${my_data_colb} = HR221500011293</msg>
+<status status="PASS" starttime="20231218 19:00:55.089" endtime="20231218 19:00:55.090"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.090" endtime="20231218 19:00:55.091"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.091" endtime="20231218 19:00:55.091"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.087" endtime="20231218 19:00:55.091"/>
+</iter>
+<iter>
+<var name="${i}">15</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.093" level="INFO">${rownum} = 16</msg>
+<status status="PASS" starttime="20231218 19:00:55.092" endtime="20231218 19:00:55.093"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.094" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.093" endtime="20231218 19:00:55.094"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.094" level="INFO">${my_data_colb} = HR221500011042</msg>
+<status status="PASS" starttime="20231218 19:00:55.094" endtime="20231218 19:00:55.094"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.094" endtime="20231218 19:00:55.095"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.095" endtime="20231218 19:00:55.095"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.091" endtime="20231218 19:00:55.096"/>
+</iter>
+<iter>
+<var name="${i}">16</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.097" level="INFO">${rownum} = 17</msg>
+<status status="PASS" starttime="20231218 19:00:55.096" endtime="20231218 19:00:55.097"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.098" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.098" endtime="20231218 19:00:55.098"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.099" level="INFO">${my_data_colb} = HR221500011265</msg>
+<status status="PASS" starttime="20231218 19:00:55.098" endtime="20231218 19:00:55.099"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.099" endtime="20231218 19:00:55.100"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.100" endtime="20231218 19:00:55.100"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.096" endtime="20231218 19:00:55.100"/>
+</iter>
+<iter>
+<var name="${i}">17</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.102" level="INFO">${rownum} = 18</msg>
+<status status="PASS" starttime="20231218 19:00:55.101" endtime="20231218 19:00:55.102"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.102" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.102" endtime="20231218 19:00:55.103"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.103" level="INFO">${my_data_colb} = HR221500011010</msg>
+<status status="PASS" starttime="20231218 19:00:55.103" endtime="20231218 19:00:55.103"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.103" endtime="20231218 19:00:55.104"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.104" endtime="20231218 19:00:55.104"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.100" endtime="20231218 19:00:55.104"/>
+</iter>
+<iter>
+<var name="${i}">18</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.106" level="INFO">${rownum} = 19</msg>
+<status status="PASS" starttime="20231218 19:00:55.105" endtime="20231218 19:00:55.106"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.107" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.106" endtime="20231218 19:00:55.107"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.107" level="INFO">${my_data_colb} = HR221500011036</msg>
+<status status="PASS" starttime="20231218 19:00:55.107" endtime="20231218 19:00:55.108"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.108" endtime="20231218 19:00:55.108"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.108" endtime="20231218 19:00:55.109"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.105" endtime="20231218 19:00:55.109"/>
+</iter>
+<iter>
+<var name="${i}">19</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.110" level="INFO">${rownum} = 20</msg>
+<status status="PASS" starttime="20231218 19:00:55.109" endtime="20231218 19:00:55.110"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.111" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.110" endtime="20231218 19:00:55.111"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.112" level="INFO">${my_data_colb} = HR221500011019</msg>
+<status status="PASS" starttime="20231218 19:00:55.111" endtime="20231218 19:00:55.112"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.112" endtime="20231218 19:00:55.113"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.113" endtime="20231218 19:00:55.113"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.109" endtime="20231218 19:00:55.113"/>
+</iter>
+<iter>
+<var name="${i}">20</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.115" level="INFO">${rownum} = 21</msg>
+<status status="PASS" starttime="20231218 19:00:55.114" endtime="20231218 19:00:55.115"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.116" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.115" endtime="20231218 19:00:55.116"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.117" level="INFO">${my_data_colb} = HR221500011001</msg>
+<status status="PASS" starttime="20231218 19:00:55.116" endtime="20231218 19:00:55.117"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.117" endtime="20231218 19:00:55.117"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.118" endtime="20231218 19:00:55.118"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.113" endtime="20231218 19:00:55.118"/>
+</iter>
+<iter>
+<var name="${i}">21</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.119" level="INFO">${rownum} = 22</msg>
+<status status="PASS" starttime="20231218 19:00:55.118" endtime="20231218 19:00:55.120"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.120" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.120" endtime="20231218 19:00:55.120"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.121" level="INFO">${my_data_colb} = HR221500012132</msg>
+<status status="PASS" starttime="20231218 19:00:55.121" endtime="20231218 19:00:55.121"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.121" endtime="20231218 19:00:55.122"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.122" endtime="20231218 19:00:55.122"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.118" endtime="20231218 19:00:55.122"/>
+</iter>
+<iter>
+<var name="${i}">22</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.124" level="INFO">${rownum} = 23</msg>
+<status status="PASS" starttime="20231218 19:00:55.123" endtime="20231218 19:00:55.124"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.124" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.124" endtime="20231218 19:00:55.125"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.125" level="INFO">${my_data_colb} = HR221500012130</msg>
+<status status="PASS" starttime="20231218 19:00:55.125" endtime="20231218 19:00:55.125"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.126" endtime="20231218 19:00:55.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.126" endtime="20231218 19:00:55.127"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.123" endtime="20231218 19:00:55.127"/>
+</iter>
+<iter>
+<var name="${i}">23</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.128" level="INFO">${rownum} = 24</msg>
+<status status="PASS" starttime="20231218 19:00:55.127" endtime="20231218 19:00:55.128"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.129" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.128" endtime="20231218 19:00:55.129"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.130" level="INFO">${my_data_colb} = HR221500012114</msg>
+<status status="PASS" starttime="20231218 19:00:55.129" endtime="20231218 19:00:55.130"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.130" endtime="20231218 19:00:55.130"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.130" endtime="20231218 19:00:55.131"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.127" endtime="20231218 19:00:55.131"/>
+</iter>
+<iter>
+<var name="${i}">24</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.132" level="INFO">${rownum} = 25</msg>
+<status status="PASS" starttime="20231218 19:00:55.131" endtime="20231218 19:00:55.132"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.133" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.133" endtime="20231218 19:00:55.133"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.134" level="INFO">${my_data_colb} = HR221500012104</msg>
+<status status="PASS" starttime="20231218 19:00:55.133" endtime="20231218 19:00:55.134"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.134" endtime="20231218 19:00:55.134"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.134" endtime="20231218 19:00:55.135"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.131" endtime="20231218 19:00:55.135"/>
+</iter>
+<iter>
+<var name="${i}">25</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.136" level="INFO">${rownum} = 26</msg>
+<status status="PASS" starttime="20231218 19:00:55.135" endtime="20231218 19:00:55.136"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.137" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.137" endtime="20231218 19:00:55.137"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.138" level="INFO">${my_data_colb} = HC221200191013</msg>
+<status status="PASS" starttime="20231218 19:00:55.137" endtime="20231218 19:00:55.138"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.138" endtime="20231218 19:00:55.139"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.139" endtime="20231218 19:00:55.139"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.135" endtime="20231218 19:00:55.139"/>
+</iter>
+<iter>
+<var name="${i}">26</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.140" level="INFO">${rownum} = 27</msg>
+<status status="PASS" starttime="20231218 19:00:55.139" endtime="20231218 19:00:55.140"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.141" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.141" endtime="20231218 19:00:55.141"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.142" level="INFO">${my_data_colb} = HR221500012136</msg>
+<status status="PASS" starttime="20231218 19:00:55.142" endtime="20231218 19:00:55.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.143" endtime="20231218 19:00:55.143"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.143" endtime="20231218 19:00:55.144"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.139" endtime="20231218 19:00:55.144"/>
+</iter>
+<iter>
+<var name="${i}">27</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.145" level="INFO">${rownum} = 28</msg>
+<status status="PASS" starttime="20231218 19:00:55.144" endtime="20231218 19:00:55.145"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.146" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.145" endtime="20231218 19:00:55.146"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.147" level="INFO">${my_data_colb} = HR221500012142</msg>
+<status status="PASS" starttime="20231218 19:00:55.146" endtime="20231218 19:00:55.147"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.147" endtime="20231218 19:00:55.147"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.147" endtime="20231218 19:00:55.148"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.144" endtime="20231218 19:00:55.148"/>
+</iter>
+<iter>
+<var name="${i}">28</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.149" level="INFO">${rownum} = 29</msg>
+<status status="PASS" starttime="20231218 19:00:55.148" endtime="20231218 19:00:55.149"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.150" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.150" endtime="20231218 19:00:55.150"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.151" level="INFO">${my_data_colb} = HC221200192045</msg>
+<status status="PASS" starttime="20231218 19:00:55.150" endtime="20231218 19:00:55.151"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.151" endtime="20231218 19:00:55.152"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.152" endtime="20231218 19:00:55.152"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.148" endtime="20231218 19:00:55.152"/>
+</iter>
+<iter>
+<var name="${i}">29</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.154" level="INFO">${rownum} = 30</msg>
+<status status="PASS" starttime="20231218 19:00:55.153" endtime="20231218 19:00:55.154"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.154" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.154" endtime="20231218 19:00:55.154"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.155" level="INFO">${my_data_colb} = HR221500011282</msg>
+<status status="PASS" starttime="20231218 19:00:55.155" endtime="20231218 19:00:55.155"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.155" endtime="20231218 19:00:55.156"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.156" endtime="20231218 19:00:55.156"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.152" endtime="20231218 19:00:55.156"/>
+</iter>
+<iter>
+<var name="${i}">30</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.158" level="INFO">${rownum} = 31</msg>
+<status status="PASS" starttime="20231218 19:00:55.157" endtime="20231218 19:00:55.158"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.159" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.158" endtime="20231218 19:00:55.159"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.159" level="INFO">${my_data_colb} = HR221500012102</msg>
+<status status="PASS" starttime="20231218 19:00:55.159" endtime="20231218 19:00:55.159"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.160" endtime="20231218 19:00:55.160"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.160" endtime="20231218 19:00:55.161"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.157" endtime="20231218 19:00:55.161"/>
+</iter>
+<iter>
+<var name="${i}">31</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.162" level="INFO">${rownum} = 32</msg>
+<status status="PASS" starttime="20231218 19:00:55.161" endtime="20231218 19:00:55.162"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.163" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.162" endtime="20231218 19:00:55.163"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.164" level="INFO">${my_data_colb} = HR221500011296</msg>
+<status status="PASS" starttime="20231218 19:00:55.163" endtime="20231218 19:00:55.164"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.164" endtime="20231218 19:00:55.164"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.165" endtime="20231218 19:00:55.165"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.161" endtime="20231218 19:00:55.165"/>
+</iter>
+<iter>
+<var name="${i}">32</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.166" level="INFO">${rownum} = 33</msg>
+<status status="PASS" starttime="20231218 19:00:55.165" endtime="20231218 19:00:55.166"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.167" level="INFO">${my_data_cola} = SFP-1000BaseT</msg>
+<status status="PASS" starttime="20231218 19:00:55.167" endtime="20231218 19:00:55.167"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.168" level="INFO">${my_data_colb} = HR221500012145</msg>
+<status status="PASS" starttime="20231218 19:00:55.167" endtime="20231218 19:00:55.168"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.168" endtime="20231218 19:00:55.169"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.169" endtime="20231218 19:00:55.169"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.165" endtime="20231218 19:00:55.169"/>
+</iter>
+<iter>
+<var name="${i}">33</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.171" level="INFO">${rownum} = 34</msg>
+<status status="PASS" starttime="20231218 19:00:55.170" endtime="20231218 19:00:55.171"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.171" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.171" endtime="20231218 19:00:55.171"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.172" level="INFO">${my_data_colb} = UJLD2D01U8S</msg>
+<status status="PASS" starttime="20231218 19:00:55.172" endtime="20231218 19:00:55.172"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.172" endtime="20231218 19:00:55.173"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.173" endtime="20231218 19:00:55.174"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.169" endtime="20231218 19:00:55.174"/>
+</iter>
+<iter>
+<var name="${i}">34</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.175" level="INFO">${rownum} = 35</msg>
+<status status="PASS" starttime="20231218 19:00:55.174" endtime="20231218 19:00:55.175"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.176" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.175" endtime="20231218 19:00:55.176"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.176" level="INFO">${my_data_colb} = UJLD2D02DEL</msg>
+<status status="PASS" starttime="20231218 19:00:55.176" endtime="20231218 19:00:55.176"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.177" endtime="20231218 19:00:55.177"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.177" endtime="20231218 19:00:55.178"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.174" endtime="20231218 19:00:55.178"/>
+</iter>
+<iter>
+<var name="${i}">35</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.179" level="INFO">${rownum} = 36</msg>
+<status status="PASS" starttime="20231218 19:00:55.178" endtime="20231218 19:00:55.179"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.180" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.179" endtime="20231218 19:00:55.180"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.181" level="INFO">${my_data_colb} = UJLD2D022PD</msg>
+<status status="PASS" starttime="20231218 19:00:55.180" endtime="20231218 19:00:55.181"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.181" endtime="20231218 19:00:55.181"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.182" endtime="20231218 19:00:55.182"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.178" endtime="20231218 19:00:55.182"/>
+</iter>
+<iter>
+<var name="${i}">36</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.183" level="INFO">${rownum} = 37</msg>
+<status status="PASS" starttime="20231218 19:00:55.182" endtime="20231218 19:00:55.183"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.184" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.184" endtime="20231218 19:00:55.184"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.185" level="INFO">${my_data_colb} = UJLD2D01YKL</msg>
+<status status="PASS" starttime="20231218 19:00:55.184" endtime="20231218 19:00:55.185"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.185" endtime="20231218 19:00:55.186"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.186" endtime="20231218 19:00:55.186"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.182" endtime="20231218 19:00:55.186"/>
+</iter>
+<iter>
+<var name="${i}">37</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.188" level="INFO">${rownum} = 38</msg>
+<status status="PASS" starttime="20231218 19:00:55.187" endtime="20231218 19:00:55.188"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.189" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.188" endtime="20231218 19:00:55.189"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.189" level="INFO">${my_data_colb} = UJLD2D01YLX</msg>
+<status status="PASS" starttime="20231218 19:00:55.189" endtime="20231218 19:00:55.189"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.189" endtime="20231218 19:00:55.190"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.190" endtime="20231218 19:00:55.190"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.186" endtime="20231218 19:00:55.191"/>
+</iter>
+<iter>
+<var name="${i}">38</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.192" level="INFO">${rownum} = 39</msg>
+<status status="PASS" starttime="20231218 19:00:55.191" endtime="20231218 19:00:55.192"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.193" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.192" endtime="20231218 19:00:55.193"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.193" level="INFO">${my_data_colb} = UJLD2D02961</msg>
+<status status="PASS" starttime="20231218 19:00:55.193" endtime="20231218 19:00:55.194"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.194" endtime="20231218 19:00:55.194"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.194" endtime="20231218 19:00:55.195"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.191" endtime="20231218 19:00:55.195"/>
+</iter>
+<iter>
+<var name="${i}">39</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.196" level="INFO">${rownum} = 40</msg>
+<status status="PASS" starttime="20231218 19:00:55.195" endtime="20231218 19:00:55.196"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.197" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.196" endtime="20231218 19:00:55.197"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.198" level="INFO">${my_data_colb} = UJLD2D02399</msg>
+<status status="PASS" starttime="20231218 19:00:55.197" endtime="20231218 19:00:55.198"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.198" endtime="20231218 19:00:55.198"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.199" endtime="20231218 19:00:55.199"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.195" endtime="20231218 19:00:55.199"/>
+</iter>
+<iter>
+<var name="${i}">40</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.200" level="INFO">${rownum} = 41</msg>
+<status status="PASS" starttime="20231218 19:00:55.199" endtime="20231218 19:00:55.200"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.201" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.200" endtime="20231218 19:00:55.201"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.202" level="INFO">${my_data_colb} = UJLD2D0213C</msg>
+<status status="PASS" starttime="20231218 19:00:55.201" endtime="20231218 19:00:55.202"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.202" endtime="20231218 19:00:55.202"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.202" endtime="20231218 19:00:55.203"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.199" endtime="20231218 19:00:55.203"/>
+</iter>
+<iter>
+<var name="${i}">41</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.204" level="INFO">${rownum} = 42</msg>
+<status status="PASS" starttime="20231218 19:00:55.203" endtime="20231218 19:00:55.205"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.205" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.205" endtime="20231218 19:00:55.205"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.206" level="INFO">${my_data_colb} = UJLD2D026A6</msg>
+<status status="PASS" starttime="20231218 19:00:55.206" endtime="20231218 19:00:55.206"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.206" endtime="20231218 19:00:55.207"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.207" endtime="20231218 19:00:55.207"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.203" endtime="20231218 19:00:55.207"/>
+</iter>
+<iter>
+<var name="${i}">42</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.209" level="INFO">${rownum} = 43</msg>
+<status status="PASS" starttime="20231218 19:00:55.208" endtime="20231218 19:00:55.209"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.210" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.209" endtime="20231218 19:00:55.210"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.210" level="INFO">${my_data_colb} = UJLD2D01DCK</msg>
+<status status="PASS" starttime="20231218 19:00:55.210" endtime="20231218 19:00:55.211"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.211" endtime="20231218 19:00:55.211"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.211" endtime="20231218 19:00:55.212"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.208" endtime="20231218 19:00:55.212"/>
+</iter>
+<iter>
+<var name="${i}">43</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.213" level="INFO">${rownum} = 44</msg>
+<status status="PASS" starttime="20231218 19:00:55.212" endtime="20231218 19:00:55.213"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.214" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.213" endtime="20231218 19:00:55.214"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.215" level="INFO">${my_data_colb} = UJLD2D01XD2</msg>
+<status status="PASS" starttime="20231218 19:00:55.214" endtime="20231218 19:00:55.215"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.215" endtime="20231218 19:00:55.216"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.216" endtime="20231218 19:00:55.216"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.212" endtime="20231218 19:00:55.216"/>
+</iter>
+<iter>
+<var name="${i}">44</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.217" level="INFO">${rownum} = 45</msg>
+<status status="PASS" starttime="20231218 19:00:55.217" endtime="20231218 19:00:55.218"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.218" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.218" endtime="20231218 19:00:55.218"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.219" level="INFO">${my_data_colb} = UJLD2D0244E</msg>
+<status status="PASS" starttime="20231218 19:00:55.218" endtime="20231218 19:00:55.219"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.219" endtime="20231218 19:00:55.220"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.220" endtime="20231218 19:00:55.220"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.216" endtime="20231218 19:00:55.220"/>
+</iter>
+<iter>
+<var name="${i}">45</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.222" level="INFO">${rownum} = 46</msg>
+<status status="PASS" starttime="20231218 19:00:55.221" endtime="20231218 19:00:55.222"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.223" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.222" endtime="20231218 19:00:55.223"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.224" level="INFO">${my_data_colb} = UJLD2D0250Y</msg>
+<status status="PASS" starttime="20231218 19:00:55.223" endtime="20231218 19:00:55.224"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.224" endtime="20231218 19:00:55.224"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.224" endtime="20231218 19:00:55.225"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.220" endtime="20231218 19:00:55.225"/>
+</iter>
+<iter>
+<var name="${i}">46</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.226" level="INFO">${rownum} = 47</msg>
+<status status="PASS" starttime="20231218 19:00:55.225" endtime="20231218 19:00:55.226"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.227" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.226" endtime="20231218 19:00:55.227"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.228" level="INFO">${my_data_colb} = UJLD2D027BT</msg>
+<status status="PASS" starttime="20231218 19:00:55.227" endtime="20231218 19:00:55.228"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.228" endtime="20231218 19:00:55.228"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.229" endtime="20231218 19:00:55.229"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.225" endtime="20231218 19:00:55.229"/>
+</iter>
+<iter>
+<var name="${i}">47</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.230" level="INFO">${rownum} = 48</msg>
+<status status="PASS" starttime="20231218 19:00:55.229" endtime="20231218 19:00:55.231"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.231" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.231" endtime="20231218 19:00:55.231"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.232" level="INFO">${my_data_colb} = UJLD2D01UPL</msg>
+<status status="PASS" starttime="20231218 19:00:55.231" endtime="20231218 19:00:55.232"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.232" endtime="20231218 19:00:55.233"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.233" endtime="20231218 19:00:55.233"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.229" endtime="20231218 19:00:55.233"/>
+</iter>
+<iter>
+<var name="${i}">48</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.235" level="INFO">${rownum} = 49</msg>
+<status status="PASS" starttime="20231218 19:00:55.234" endtime="20231218 19:00:55.235"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.236" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.235" endtime="20231218 19:00:55.236"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.236" level="INFO">${my_data_colb} = UJLD2D01YBK</msg>
+<status status="PASS" starttime="20231218 19:00:55.236" endtime="20231218 19:00:55.236"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.237" endtime="20231218 19:00:55.237"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.237" endtime="20231218 19:00:55.238"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.234" endtime="20231218 19:00:55.238"/>
+</iter>
+<iter>
+<var name="${i}">49</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.239" level="INFO">${rownum} = 50</msg>
+<status status="PASS" starttime="20231218 19:00:55.238" endtime="20231218 19:00:55.239"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.240" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.239" endtime="20231218 19:00:55.240"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.241" level="INFO">${my_data_colb} = UJLD2D01K7T</msg>
+<status status="PASS" starttime="20231218 19:00:55.240" endtime="20231218 19:00:55.241"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.241" endtime="20231218 19:00:55.241"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.242" endtime="20231218 19:00:55.242"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.238" endtime="20231218 19:00:55.242"/>
+</iter>
+<iter>
+<var name="${i}">50</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.243" level="INFO">${rownum} = 51</msg>
+<status status="PASS" starttime="20231218 19:00:55.242" endtime="20231218 19:00:55.243"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.244" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.244" endtime="20231218 19:00:55.244"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.245" level="INFO">${my_data_colb} = UJLD2D01P40</msg>
+<status status="PASS" starttime="20231218 19:00:55.244" endtime="20231218 19:00:55.245"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.245" endtime="20231218 19:00:55.246"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.246" endtime="20231218 19:00:55.246"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.242" endtime="20231218 19:00:55.246"/>
+</iter>
+<iter>
+<var name="${i}">51</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.248" level="INFO">${rownum} = 52</msg>
+<status status="PASS" starttime="20231218 19:00:55.247" endtime="20231218 19:00:55.248"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.248" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.248" endtime="20231218 19:00:55.249"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.249" level="INFO">${my_data_colb} = UJLD2D01XCE</msg>
+<status status="PASS" starttime="20231218 19:00:55.249" endtime="20231218 19:00:55.249"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.249" endtime="20231218 19:00:55.250"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.250" endtime="20231218 19:00:55.250"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.247" endtime="20231218 19:00:55.250"/>
+</iter>
+<iter>
+<var name="${i}">52</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.252" level="INFO">${rownum} = 53</msg>
+<status status="PASS" starttime="20231218 19:00:55.251" endtime="20231218 19:00:55.252"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.253" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.252" endtime="20231218 19:00:55.253"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.253" level="INFO">${my_data_colb} = UJLD2D01YCY</msg>
+<status status="PASS" starttime="20231218 19:00:55.253" endtime="20231218 19:00:55.253"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.254" endtime="20231218 19:00:55.254"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.254" endtime="20231218 19:00:55.255"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.251" endtime="20231218 19:00:55.255"/>
+</iter>
+<iter>
+<var name="${i}">53</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.256" level="INFO">${rownum} = 54</msg>
+<status status="PASS" starttime="20231218 19:00:55.255" endtime="20231218 19:00:55.256"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.257" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.256" endtime="20231218 19:00:55.257"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.257" level="INFO">${my_data_colb} = UJLD2D01YP8</msg>
+<status status="PASS" starttime="20231218 19:00:55.257" endtime="20231218 19:00:55.258"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.258" endtime="20231218 19:00:55.258"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.258" endtime="20231218 19:00:55.259"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.255" endtime="20231218 19:00:55.259"/>
+</iter>
+<iter>
+<var name="${i}">54</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.260" level="INFO">${rownum} = 55</msg>
+<status status="PASS" starttime="20231218 19:00:55.259" endtime="20231218 19:00:55.260"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.261" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.261" endtime="20231218 19:00:55.261"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.262" level="INFO">${my_data_colb} = UJLD2D02092</msg>
+<status status="PASS" starttime="20231218 19:00:55.261" endtime="20231218 19:00:55.262"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.262" endtime="20231218 19:00:55.262"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.262" endtime="20231218 19:00:55.263"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.259" endtime="20231218 19:00:55.263"/>
+</iter>
+<iter>
+<var name="${i}">55</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.264" level="INFO">${rownum} = 56</msg>
+<status status="PASS" starttime="20231218 19:00:55.263" endtime="20231218 19:00:55.264"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.265" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.264" endtime="20231218 19:00:55.265"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.265" level="INFO">${my_data_colb} = UJLD2D024CH</msg>
+<status status="PASS" starttime="20231218 19:00:55.265" endtime="20231218 19:00:55.266"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.266" endtime="20231218 19:00:55.266"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.266" endtime="20231218 19:00:55.267"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.263" endtime="20231218 19:00:55.267"/>
+</iter>
+<iter>
+<var name="${i}">56</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.268" level="INFO">${rownum} = 57</msg>
+<status status="PASS" starttime="20231218 19:00:55.267" endtime="20231218 19:00:55.268"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.269" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.268" endtime="20231218 19:00:55.269"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.270" level="INFO">${my_data_colb} = UJLD2D01HP6</msg>
+<status status="PASS" starttime="20231218 19:00:55.269" endtime="20231218 19:00:55.270"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.270" endtime="20231218 19:00:55.270"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.270" endtime="20231218 19:00:55.271"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.267" endtime="20231218 19:00:55.271"/>
+</iter>
+<iter>
+<var name="${i}">57</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.272" level="INFO">${rownum} = 58</msg>
+<status status="PASS" starttime="20231218 19:00:55.271" endtime="20231218 19:00:55.272"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.273" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.273" endtime="20231218 19:00:55.273"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.274" level="INFO">${my_data_colb} = UJLD2D01X82</msg>
+<status status="PASS" starttime="20231218 19:00:55.273" endtime="20231218 19:00:55.274"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.274" endtime="20231218 19:00:55.275"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.275" endtime="20231218 19:00:55.275"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.271" endtime="20231218 19:00:55.275"/>
+</iter>
+<iter>
+<var name="${i}">58</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.277" level="INFO">${rownum} = 59</msg>
+<status status="PASS" starttime="20231218 19:00:55.276" endtime="20231218 19:00:55.277"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.277" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.277" endtime="20231218 19:00:55.277"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.278" level="INFO">${my_data_colb} = UJLD2D026DX</msg>
+<status status="PASS" starttime="20231218 19:00:55.277" endtime="20231218 19:00:55.278"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.278" endtime="20231218 19:00:55.279"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.279" endtime="20231218 19:00:55.279"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.275" endtime="20231218 19:00:55.279"/>
+</iter>
+<iter>
+<var name="${i}">59</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.281" level="INFO">${rownum} = 60</msg>
+<status status="PASS" starttime="20231218 19:00:55.280" endtime="20231218 19:00:55.281"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.281" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.281" endtime="20231218 19:00:55.282"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.282" level="INFO">${my_data_colb} = UJLD2D02A9G</msg>
+<status status="PASS" starttime="20231218 19:00:55.282" endtime="20231218 19:00:55.282"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.282" endtime="20231218 19:00:55.283"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.283" endtime="20231218 19:00:55.283"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.279" endtime="20231218 19:00:55.284"/>
+</iter>
+<iter>
+<var name="${i}">60</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.285" level="INFO">${rownum} = 61</msg>
+<status status="PASS" starttime="20231218 19:00:55.284" endtime="20231218 19:00:55.285"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.286" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.285" endtime="20231218 19:00:55.286"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.286" level="INFO">${my_data_colb} = UJLD2D02AL6</msg>
+<status status="PASS" starttime="20231218 19:00:55.286" endtime="20231218 19:00:55.286"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.287" endtime="20231218 19:00:55.287"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.287" endtime="20231218 19:00:55.288"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.284" endtime="20231218 19:00:55.288"/>
+</iter>
+<iter>
+<var name="${i}">61</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.289" level="INFO">${rownum} = 62</msg>
+<status status="PASS" starttime="20231218 19:00:55.288" endtime="20231218 19:00:55.289"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.290" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.289" endtime="20231218 19:00:55.290"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.290" level="INFO">${my_data_colb} = UJLD2D01G0N</msg>
+<status status="PASS" starttime="20231218 19:00:55.290" endtime="20231218 19:00:55.291"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.291" endtime="20231218 19:00:55.291"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.291" endtime="20231218 19:00:55.292"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.288" endtime="20231218 19:00:55.292"/>
+</iter>
+<iter>
+<var name="${i}">62</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.293" level="INFO">${rownum} = 63</msg>
+<status status="PASS" starttime="20231218 19:00:55.292" endtime="20231218 19:00:55.293"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.294" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.294" endtime="20231218 19:00:55.294"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.295" level="INFO">${my_data_colb} = UJLD2D01PDN</msg>
+<status status="PASS" starttime="20231218 19:00:55.294" endtime="20231218 19:00:55.295"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.295" endtime="20231218 19:00:55.295"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.296" endtime="20231218 19:00:55.296"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.292" endtime="20231218 19:00:55.296"/>
+</iter>
+<iter>
+<var name="${i}">63</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.297" level="INFO">${rownum} = 64</msg>
+<status status="PASS" starttime="20231218 19:00:55.296" endtime="20231218 19:00:55.298"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.298" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.298" endtime="20231218 19:00:55.298"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.299" level="INFO">${my_data_colb} = UJLD2D01R5U</msg>
+<status status="PASS" starttime="20231218 19:00:55.298" endtime="20231218 19:00:55.299"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.299" endtime="20231218 19:00:55.299"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.300" endtime="20231218 19:00:55.300"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.296" endtime="20231218 19:00:55.300"/>
+</iter>
+<iter>
+<var name="${i}">64</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.301" level="INFO">${rownum} = 65</msg>
+<status status="PASS" starttime="20231218 19:00:55.301" endtime="20231218 19:00:55.302"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.302" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.302" endtime="20231218 19:00:55.302"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.303" level="INFO">${my_data_colb} = UJLD2D01X70</msg>
+<status status="PASS" starttime="20231218 19:00:55.302" endtime="20231218 19:00:55.303"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.303" endtime="20231218 19:00:55.304"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.304" endtime="20231218 19:00:55.304"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.300" endtime="20231218 19:00:55.304"/>
+</iter>
+<iter>
+<var name="${i}">65</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.306" level="INFO">${rownum} = 66</msg>
+<status status="PASS" starttime="20231218 19:00:55.305" endtime="20231218 19:00:55.306"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.306" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.306" endtime="20231218 19:00:55.307"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.307" level="INFO">${my_data_colb} = UJLD2D027D7</msg>
+<status status="PASS" starttime="20231218 19:00:55.307" endtime="20231218 19:00:55.307"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.307" endtime="20231218 19:00:55.308"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.308" endtime="20231218 19:00:55.308"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.304" endtime="20231218 19:00:55.308"/>
+</iter>
+<iter>
+<var name="${i}">66</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.310" level="INFO">${rownum} = 67</msg>
+<status status="PASS" starttime="20231218 19:00:55.309" endtime="20231218 19:00:55.310"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.311" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.310" endtime="20231218 19:00:55.311"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.312" level="INFO">${my_data_colb} = UJLD2D0204B</msg>
+<status status="PASS" starttime="20231218 19:00:55.311" endtime="20231218 19:00:55.312"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.312" endtime="20231218 19:00:55.312"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.312" endtime="20231218 19:00:55.313"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.309" endtime="20231218 19:00:55.313"/>
+</iter>
+<iter>
+<var name="${i}">67</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.314" level="INFO">${rownum} = 68</msg>
+<status status="PASS" starttime="20231218 19:00:55.313" endtime="20231218 19:00:55.315"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.315" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.315" endtime="20231218 19:00:55.315"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.316" level="INFO">${my_data_colb} = UJLD2D02KX4</msg>
+<status status="PASS" starttime="20231218 19:00:55.315" endtime="20231218 19:00:55.316"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.316" endtime="20231218 19:00:55.317"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.317" endtime="20231218 19:00:55.317"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.313" endtime="20231218 19:00:55.317"/>
+</iter>
+<iter>
+<var name="${i}">68</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.319" level="INFO">${rownum} = 69</msg>
+<status status="PASS" starttime="20231218 19:00:55.318" endtime="20231218 19:00:55.319"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.319" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.319" endtime="20231218 19:00:55.320"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.320" level="INFO">${my_data_colb} = 8000004221322</msg>
+<status status="PASS" starttime="20231218 19:00:55.320" endtime="20231218 19:00:55.320"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.320" endtime="20231218 19:00:55.321"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.321" endtime="20231218 19:00:55.321"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.317" endtime="20231218 19:00:55.322"/>
+</iter>
+<iter>
+<var name="${i}">69</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.323" level="INFO">${rownum} = 70</msg>
+<status status="PASS" starttime="20231218 19:00:55.322" endtime="20231218 19:00:55.323"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.324" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.323" endtime="20231218 19:00:55.324"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.324" level="INFO">${my_data_colb} = UJLD2D02S7G</msg>
+<status status="PASS" starttime="20231218 19:00:55.324" endtime="20231218 19:00:55.324"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.324" endtime="20231218 19:00:55.325"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.325" endtime="20231218 19:00:55.325"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.322" endtime="20231218 19:00:55.325"/>
+</iter>
+<iter>
+<var name="${i}">70</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.327" level="INFO">${rownum} = 71</msg>
+<status status="PASS" starttime="20231218 19:00:55.326" endtime="20231218 19:00:55.327"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.328" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.327" endtime="20231218 19:00:55.328"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.328" level="INFO">${my_data_colb} = UJLD2D02DF0</msg>
+<status status="PASS" starttime="20231218 19:00:55.328" endtime="20231218 19:00:55.328"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.329" endtime="20231218 19:00:55.329"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.329" endtime="20231218 19:00:55.330"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.325" endtime="20231218 19:00:55.330"/>
+</iter>
+<iter>
+<var name="${i}">71</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.331" level="INFO">${rownum} = 72</msg>
+<status status="PASS" starttime="20231218 19:00:55.330" endtime="20231218 19:00:55.331"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.332" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.331" endtime="20231218 19:00:55.332"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.333" level="INFO">${my_data_colb} = UJLD2D027DY</msg>
+<status status="PASS" starttime="20231218 19:00:55.332" endtime="20231218 19:00:55.333"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.333" endtime="20231218 19:00:55.333"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.334" endtime="20231218 19:00:55.334"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.330" endtime="20231218 19:00:55.334"/>
+</iter>
+<iter>
+<var name="${i}">72</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.335" level="INFO">${rownum} = 73</msg>
+<status status="PASS" starttime="20231218 19:00:55.334" endtime="20231218 19:00:55.335"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.336" level="INFO">${my_data_cola} = SFP-10G-LR</msg>
+<status status="PASS" starttime="20231218 19:00:55.336" endtime="20231218 19:00:55.336"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.337" level="INFO">${my_data_colb} = UJLD2D0253S</msg>
+<status status="PASS" starttime="20231218 19:00:55.337" endtime="20231218 19:00:55.337"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.337" endtime="20231218 19:00:55.338"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.338" endtime="20231218 19:00:55.338"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.334" endtime="20231218 19:00:55.338"/>
+</iter>
+<iter>
+<var name="${i}">73</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.340" level="INFO">${rownum} = 74</msg>
+<status status="PASS" starttime="20231218 19:00:55.339" endtime="20231218 19:00:55.340"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.340" level="INFO">${my_data_cola} = CE6881-48S6CQ-B</msg>
+<status status="PASS" starttime="20231218 19:00:55.340" endtime="20231218 19:00:55.340"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.341" level="INFO">${my_data_colb} = 102356292961</msg>
+<status status="PASS" starttime="20231218 19:00:55.341" endtime="20231218 19:00:55.341"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.342" endtime="20231218 19:00:55.342"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.342" endtime="20231218 19:00:55.343"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.338" endtime="20231218 19:00:55.343"/>
+</iter>
+<iter>
+<var name="${i}">74</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.344" level="INFO">${rownum} = 75</msg>
+<status status="PASS" starttime="20231218 19:00:55.343" endtime="20231218 19:00:55.344"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.345" level="INFO">${my_data_cola} = CE6881-48S6CQ-B</msg>
+<status status="PASS" starttime="20231218 19:00:55.344" endtime="20231218 19:00:55.345"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.346" level="INFO">${my_data_colb} = 102355984806</msg>
+<status status="PASS" starttime="20231218 19:00:55.345" endtime="20231218 19:00:55.346"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.346" endtime="20231218 19:00:55.346"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.347" endtime="20231218 19:00:55.347"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.343" endtime="20231218 19:00:55.347"/>
+</iter>
+<iter>
+<var name="${i}">75</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.348" level="INFO">${rownum} = 76</msg>
+<status status="PASS" starttime="20231218 19:00:55.347" endtime="20231218 19:00:55.348"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.349" level="INFO">${my_data_cola} = CE6881-48S6CQ-B</msg>
+<status status="PASS" starttime="20231218 19:00:55.349" endtime="20231218 19:00:55.349"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.350" level="INFO">${my_data_colb} = 102356292948</msg>
+<status status="PASS" starttime="20231218 19:00:55.349" endtime="20231218 19:00:55.350"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.350" endtime="20231218 19:00:55.351"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.351" endtime="20231218 19:00:55.351"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.347" endtime="20231218 19:00:55.351"/>
+</iter>
+<iter>
+<var name="${i}">76</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.353" level="INFO">${rownum} = 77</msg>
+<status status="PASS" starttime="20231218 19:00:55.352" endtime="20231218 19:00:55.353"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.354" level="INFO">${my_data_cola} = CE6881-48S6CQ-B</msg>
+<status status="PASS" starttime="20231218 19:00:55.353" endtime="20231218 19:00:55.354"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.354" level="INFO">${my_data_colb} = 102356292931</msg>
+<status status="PASS" starttime="20231218 19:00:55.354" endtime="20231218 19:00:55.354"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.355" endtime="20231218 19:00:55.355"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.355" endtime="20231218 19:00:55.356"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.352" endtime="20231218 19:00:55.356"/>
+</iter>
+<iter>
+<var name="${i}">77</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.357" level="INFO">${rownum} = 78</msg>
+<status status="PASS" starttime="20231218 19:00:55.356" endtime="20231218 19:00:55.357"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.358" level="INFO">${my_data_cola} = CC13UK300</msg>
+<status status="PASS" starttime="20231218 19:00:55.357" endtime="20231218 19:00:55.358"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.359" level="INFO">${my_data_colb} = N/A</msg>
+<status status="PASS" starttime="20231218 19:00:55.358" endtime="20231218 19:00:55.359"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.359" endtime="20231218 19:00:55.359"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.360" endtime="20231218 19:00:55.360"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.356" endtime="20231218 19:00:55.360"/>
+</iter>
+<iter>
+<var name="${i}">78</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.361" level="INFO">${rownum} = 79</msg>
+<status status="PASS" starttime="20231218 19:00:55.360" endtime="20231218 19:00:55.361"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.362" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.362" endtime="20231218 19:00:55.362"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.363" level="INFO">${my_data_colb} = ME222702790323</msg>
+<status status="PASS" starttime="20231218 19:00:55.362" endtime="20231218 19:00:55.363"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.363" endtime="20231218 19:00:55.364"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.364" endtime="20231218 19:00:55.364"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.360" endtime="20231218 19:00:55.364"/>
+</iter>
+<iter>
+<var name="${i}">79</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.366" level="INFO">${rownum} = 80</msg>
+<status status="PASS" starttime="20231218 19:00:55.365" endtime="20231218 19:00:55.366"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.366" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.366" endtime="20231218 19:00:55.366"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.367" level="INFO">${my_data_colb} = ME222702790495</msg>
+<status status="PASS" starttime="20231218 19:00:55.367" endtime="20231218 19:00:55.367"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.367" endtime="20231218 19:00:55.368"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.368" endtime="20231218 19:00:55.368"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.364" endtime="20231218 19:00:55.368"/>
+</iter>
+<iter>
+<var name="${i}">80</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.370" level="INFO">${rownum} = 81</msg>
+<status status="PASS" starttime="20231218 19:00:55.369" endtime="20231218 19:00:55.370"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.370" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.370" endtime="20231218 19:00:55.371"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.371" level="INFO">${my_data_colb} = ME222702790294</msg>
+<status status="PASS" starttime="20231218 19:00:55.371" endtime="20231218 19:00:55.371"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.371" endtime="20231218 19:00:55.372"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.372" endtime="20231218 19:00:55.372"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.368" endtime="20231218 19:00:55.373"/>
+</iter>
+<iter>
+<var name="${i}">81</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.374" level="INFO">${rownum} = 82</msg>
+<status status="PASS" starttime="20231218 19:00:55.373" endtime="20231218 19:00:55.374"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.375" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.374" endtime="20231218 19:00:55.375"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.376" level="INFO">${my_data_colb} = ME222702790241</msg>
+<status status="PASS" starttime="20231218 19:00:55.375" endtime="20231218 19:00:55.376"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.376" endtime="20231218 19:00:55.377"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.377" endtime="20231218 19:00:55.377"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.373" endtime="20231218 19:00:55.377"/>
+</iter>
+<iter>
+<var name="${i}">82</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.379" level="INFO">${rownum} = 83</msg>
+<status status="PASS" starttime="20231218 19:00:55.378" endtime="20231218 19:00:55.379"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.379" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.379" endtime="20231218 19:00:55.380"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.380" level="INFO">${my_data_colb} = ME222702790447</msg>
+<status status="PASS" starttime="20231218 19:00:55.380" endtime="20231218 19:00:55.380"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.381" endtime="20231218 19:00:55.381"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.381" endtime="20231218 19:00:55.381"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.377" endtime="20231218 19:00:55.382"/>
+</iter>
+<iter>
+<var name="${i}">83</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.383" level="INFO">${rownum} = 84</msg>
+<status status="PASS" starttime="20231218 19:00:55.382" endtime="20231218 19:00:55.383"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.384" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.383" endtime="20231218 19:00:55.384"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.384" level="INFO">${my_data_colb} = ME222702790107</msg>
+<status status="PASS" starttime="20231218 19:00:55.384" endtime="20231218 19:00:55.384"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.385" endtime="20231218 19:00:55.385"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.385" endtime="20231218 19:00:55.385"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.382" endtime="20231218 19:00:55.385"/>
+</iter>
+<iter>
+<var name="${i}">84</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.387" level="INFO">${rownum} = 85</msg>
+<status status="PASS" starttime="20231218 19:00:55.386" endtime="20231218 19:00:55.387"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.388" level="INFO">${my_data_cola} = SFP-10G-BXU1</msg>
+<status status="PASS" starttime="20231218 19:00:55.387" endtime="20231218 19:00:55.388"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.388" level="INFO">${my_data_colb} = ME222702790168</msg>
+<status status="PASS" starttime="20231218 19:00:55.388" endtime="20231218 19:00:55.388"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.388" endtime="20231218 19:00:55.389"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.389" endtime="20231218 19:00:55.389"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.385" endtime="20231218 19:00:55.389"/>
+</iter>
+<iter>
+<var name="${i}">85</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.391" level="INFO">${rownum} = 86</msg>
+<status status="PASS" starttime="20231218 19:00:55.390" endtime="20231218 19:00:55.391"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.392" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.391" endtime="20231218 19:00:55.392"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.392" level="INFO">${my_data_colb} = HM223400070115</msg>
+<status status="PASS" starttime="20231218 19:00:55.392" endtime="20231218 19:00:55.392"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.393" endtime="20231218 19:00:55.393"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.393" endtime="20231218 19:00:55.394"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.390" endtime="20231218 19:00:55.394"/>
+</iter>
+<iter>
+<var name="${i}">86</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.395" level="INFO">${rownum} = 87</msg>
+<status status="PASS" starttime="20231218 19:00:55.394" endtime="20231218 19:00:55.395"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.396" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.395" endtime="20231218 19:00:55.396"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.396" level="INFO">${my_data_colb} = HM223400070129</msg>
+<status status="PASS" starttime="20231218 19:00:55.396" endtime="20231218 19:00:55.397"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.397" endtime="20231218 19:00:55.397"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.397" endtime="20231218 19:00:55.398"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.394" endtime="20231218 19:00:55.398"/>
+</iter>
+<iter>
+<var name="${i}">87</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.399" level="INFO">${rownum} = 88</msg>
+<status status="PASS" starttime="20231218 19:00:55.398" endtime="20231218 19:00:55.399"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.400" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.400" endtime="20231218 19:00:55.400"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.401" level="INFO">${my_data_colb} = HM223400070116</msg>
+<status status="PASS" starttime="20231218 19:00:55.400" endtime="20231218 19:00:55.401"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.401" endtime="20231218 19:00:55.401"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.402" endtime="20231218 19:00:55.402"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.398" endtime="20231218 19:00:55.402"/>
+</iter>
+<iter>
+<var name="${i}">88</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.403" level="INFO">${rownum} = 89</msg>
+<status status="PASS" starttime="20231218 19:00:55.402" endtime="20231218 19:00:55.404"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.404" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.404" endtime="20231218 19:00:55.404"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.405" level="INFO">${my_data_colb} = HM223400070133</msg>
+<status status="PASS" starttime="20231218 19:00:55.404" endtime="20231218 19:00:55.405"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.405" endtime="20231218 19:00:55.406"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.406" endtime="20231218 19:00:55.406"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.402" endtime="20231218 19:00:55.406"/>
+</iter>
+<iter>
+<var name="${i}">89</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.408" level="INFO">${rownum} = 90</msg>
+<status status="PASS" starttime="20231218 19:00:55.407" endtime="20231218 19:00:55.408"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.409" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.408" endtime="20231218 19:00:55.409"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.409" level="INFO">${my_data_colb} = HM223400070125</msg>
+<status status="PASS" starttime="20231218 19:00:55.409" endtime="20231218 19:00:55.409"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.410" endtime="20231218 19:00:55.410"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.410" endtime="20231218 19:00:55.410"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.406" endtime="20231218 19:00:55.411"/>
+</iter>
+<iter>
+<var name="${i}">90</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.412" level="INFO">${rownum} = 91</msg>
+<status status="PASS" starttime="20231218 19:00:55.411" endtime="20231218 19:00:55.412"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.413" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.412" endtime="20231218 19:00:55.413"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.414" level="INFO">${my_data_colb} = HM223400070113</msg>
+<status status="PASS" starttime="20231218 19:00:55.413" endtime="20231218 19:00:55.414"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.414" endtime="20231218 19:00:55.415"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.415" endtime="20231218 19:00:55.415"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.411" endtime="20231218 19:00:55.415"/>
+</iter>
+<iter>
+<var name="${i}">91</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.417" level="INFO">${rownum} = 92</msg>
+<status status="PASS" starttime="20231218 19:00:55.416" endtime="20231218 19:00:55.417"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.418" level="INFO">${my_data_cola} = SFP-10G-BXD1</msg>
+<status status="PASS" starttime="20231218 19:00:55.417" endtime="20231218 19:00:55.418"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.418" level="INFO">${my_data_colb} = HM223400070117</msg>
+<status status="PASS" starttime="20231218 19:00:55.418" endtime="20231218 19:00:55.418"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.419" endtime="20231218 19:00:55.419"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.419" endtime="20231218 19:00:55.419"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.415" endtime="20231218 19:00:55.420"/>
+</iter>
+<iter>
+<var name="${i}">92</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.421" level="INFO">${rownum} = 93</msg>
+<status status="PASS" starttime="20231218 19:00:55.420" endtime="20231218 19:00:55.421"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.422" level="INFO">${my_data_cola} = CC13UK300</msg>
+<status status="PASS" starttime="20231218 19:00:55.421" endtime="20231218 19:00:55.422"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.422" level="INFO">${my_data_colb} = N/A</msg>
+<status status="PASS" starttime="20231218 19:00:55.422" endtime="20231218 19:00:55.423"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.423" endtime="20231218 19:00:55.423"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.423" endtime="20231218 19:00:55.424"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.420" endtime="20231218 19:00:55.424"/>
+</iter>
+<iter>
+<var name="${i}">93</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.425" level="INFO">${rownum} = 94</msg>
+<status status="PASS" starttime="20231218 19:00:55.424" endtime="20231218 19:00:55.425"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.426" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.426" endtime="20231218 19:00:55.426"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.427" level="INFO">${my_data_colb} = QU2336017934</msg>
+<status status="PASS" starttime="20231218 19:00:55.426" endtime="20231218 19:00:55.427"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.427" endtime="20231218 19:00:55.427"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.428" endtime="20231218 19:00:55.428"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.424" endtime="20231218 19:00:55.428"/>
+</iter>
+<iter>
+<var name="${i}">94</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.430" level="INFO">${rownum} = 95</msg>
+<status status="PASS" starttime="20231218 19:00:55.428" endtime="20231218 19:00:55.430"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.430" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.430" endtime="20231218 19:00:55.430"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.431" level="INFO">${my_data_colb} = QU2336017718</msg>
+<status status="PASS" starttime="20231218 19:00:55.431" endtime="20231218 19:00:55.431"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.431" endtime="20231218 19:00:55.432"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.432" endtime="20231218 19:00:55.432"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.428" endtime="20231218 19:00:55.432"/>
+</iter>
+<iter>
+<var name="${i}">95</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.434" level="INFO">${rownum} = 96</msg>
+<status status="PASS" starttime="20231218 19:00:55.433" endtime="20231218 19:00:55.434"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.435" level="INFO">${my_data_cola} = CC13UK300</msg>
+<status status="PASS" starttime="20231218 19:00:55.434" endtime="20231218 19:00:55.435"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.435" level="INFO">${my_data_colb} = N/A</msg>
+<status status="PASS" starttime="20231218 19:00:55.435" endtime="20231218 19:00:55.436"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.436" endtime="20231218 19:00:55.436"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.436" endtime="20231218 19:00:55.437"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.432" endtime="20231218 19:00:55.437"/>
+</iter>
+<iter>
+<var name="${i}">96</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.438" level="INFO">${rownum} = 97</msg>
+<status status="PASS" starttime="20231218 19:00:55.437" endtime="20231218 19:00:55.438"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.439" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.438" endtime="20231218 19:00:55.439"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.440" level="INFO">${my_data_colb} = QU2336017669</msg>
+<status status="PASS" starttime="20231218 19:00:55.439" endtime="20231218 19:00:55.440"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.440" endtime="20231218 19:00:55.440"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.440" endtime="20231218 19:00:55.441"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.437" endtime="20231218 19:00:55.441"/>
+</iter>
+<iter>
+<var name="${i}">97</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.442" level="INFO">${rownum} = 98</msg>
+<status status="PASS" starttime="20231218 19:00:55.441" endtime="20231218 19:00:55.442"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.443" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.443" endtime="20231218 19:00:55.443"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.444" level="INFO">${my_data_colb} = QU2336017691</msg>
+<status status="PASS" starttime="20231218 19:00:55.443" endtime="20231218 19:00:55.444"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.444" endtime="20231218 19:00:55.444"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.444" endtime="20231218 19:00:55.445"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.441" endtime="20231218 19:00:55.445"/>
+</iter>
+<iter>
+<var name="${i}">98</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.446" level="INFO">${rownum} = 99</msg>
+<status status="PASS" starttime="20231218 19:00:55.445" endtime="20231218 19:00:55.447"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.447" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.447" endtime="20231218 19:00:55.447"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.448" level="INFO">${my_data_colb} = QU2336017679</msg>
+<status status="PASS" starttime="20231218 19:00:55.447" endtime="20231218 19:00:55.448"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.448" endtime="20231218 19:00:55.449"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.449" endtime="20231218 19:00:55.449"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.445" endtime="20231218 19:00:55.449"/>
+</iter>
+<iter>
+<var name="${i}">99</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.450" level="INFO">${rownum} = 100</msg>
+<status status="PASS" starttime="20231218 19:00:55.450" endtime="20231218 19:00:55.450"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.451" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.450" endtime="20231218 19:00:55.451"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.452" level="INFO">${my_data_colb} = QU2336017682</msg>
+<status status="PASS" starttime="20231218 19:00:55.451" endtime="20231218 19:00:55.452"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.452" endtime="20231218 19:00:55.452"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.452" endtime="20231218 19:00:55.453"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.449" endtime="20231218 19:00:55.453"/>
+</iter>
+<iter>
+<var name="${i}">100</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.454" level="INFO">${rownum} = 101</msg>
+<status status="PASS" starttime="20231218 19:00:55.454" endtime="20231218 19:00:55.455"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.455" level="INFO">${my_data_cola} = S5735-L48T4XE-A-V2</msg>
+<status status="PASS" starttime="20231218 19:00:55.455" endtime="20231218 19:00:55.455"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.456" level="INFO">${my_data_colb} = QU2336017699</msg>
+<status status="PASS" starttime="20231218 19:00:55.455" endtime="20231218 19:00:55.456"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.456" endtime="20231218 19:00:55.457"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.457" endtime="20231218 19:00:55.457"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.453" endtime="20231218 19:00:55.457"/>
+</iter>
+<iter>
+<var name="${i}">101</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.459" level="INFO">${rownum} = 102</msg>
+<status status="PASS" starttime="20231218 19:00:55.458" endtime="20231218 19:00:55.459"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.459" level="INFO">${my_data_cola} = PAC150S12-R</msg>
+<status status="PASS" starttime="20231218 19:00:55.459" endtime="20231218 19:00:55.459"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.460" level="INFO">${my_data_colb} = 2102312DUYDMP5000038</msg>
+<status status="PASS" starttime="20231218 19:00:55.460" endtime="20231218 19:00:55.461"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.461" endtime="20231218 19:00:55.461"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.461" endtime="20231218 19:00:55.462"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.457" endtime="20231218 19:00:55.462"/>
+</iter>
+<iter>
+<var name="${i}">102</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.463" level="INFO">${rownum} = 103</msg>
+<status status="PASS" starttime="20231218 19:00:55.462" endtime="20231218 19:00:55.463"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.464" level="INFO">${my_data_cola} = PAC150S12-R</msg>
+<status status="PASS" starttime="20231218 19:00:55.463" endtime="20231218 19:00:55.464"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.465" level="INFO">${my_data_colb} = 2102312DUYDMP5000821</msg>
+<status status="PASS" starttime="20231218 19:00:55.464" endtime="20231218 19:00:55.465"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.465" endtime="20231218 19:00:55.465"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.465" endtime="20231218 19:00:55.466"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.462" endtime="20231218 19:00:55.466"/>
+</iter>
+<iter>
+<var name="${i}">103</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.467" level="INFO">${rownum} = 104</msg>
+<status status="PASS" starttime="20231218 19:00:55.466" endtime="20231218 19:00:55.467"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.468" level="INFO">${my_data_cola} = PAC150S12-R</msg>
+<status status="PASS" starttime="20231218 19:00:55.468" endtime="20231218 19:00:55.468"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.469" level="INFO">${my_data_colb} = 2102312DUYDMP5000814</msg>
+<status status="PASS" starttime="20231218 19:00:55.468" endtime="20231218 19:00:55.469"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.469" endtime="20231218 19:00:55.469"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.470" endtime="20231218 19:00:55.470"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.466" endtime="20231218 19:00:55.470"/>
+</iter>
+<iter>
+<var name="${i}">104</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.471" level="INFO">${rownum} = 105</msg>
+<status status="PASS" starttime="20231218 19:00:55.470" endtime="20231218 19:00:55.472"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.472" level="INFO">${my_data_cola} = PAC150S12-R</msg>
+<status status="PASS" starttime="20231218 19:00:55.472" endtime="20231218 19:00:55.472"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.473" level="INFO">${my_data_colb} = 2102312DUYDMP5000040</msg>
+<status status="PASS" starttime="20231218 19:00:55.472" endtime="20231218 19:00:55.473"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.473" endtime="20231218 19:00:55.474"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.474" endtime="20231218 19:00:55.474"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.470" endtime="20231218 19:00:55.474"/>
+</iter>
+<iter>
+<var name="${i}">105</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.476" level="INFO">${rownum} = 106</msg>
+<status status="PASS" starttime="20231218 19:00:55.475" endtime="20231218 19:00:55.476"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.476" level="INFO">${my_data_cola} = CC13UK300</msg>
+<status status="PASS" starttime="20231218 19:00:55.476" endtime="20231218 19:00:55.477"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.477" level="INFO">${my_data_colb} = N/A</msg>
+<status status="PASS" starttime="20231218 19:00:55.477" endtime="20231218 19:00:55.477"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.477" endtime="20231218 19:00:55.478"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.478" endtime="20231218 19:00:55.478"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.474" endtime="20231218 19:00:55.479"/>
+</iter>
+<iter>
+<var name="${i}">106</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.480" level="INFO">${rownum} = 107</msg>
+<status status="PASS" starttime="20231218 19:00:55.479" endtime="20231218 19:00:55.480"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.481" level="INFO">${my_data_cola} = S5731-S24T4X</msg>
+<status status="PASS" starttime="20231218 19:00:55.480" endtime="20231218 19:00:55.481"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.481" level="INFO">${my_data_colb} = LD2347004150</msg>
+<status status="PASS" starttime="20231218 19:00:55.481" endtime="20231218 19:00:55.481"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.482" endtime="20231218 19:00:55.482"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.482" endtime="20231218 19:00:55.483"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.479" endtime="20231218 19:00:55.483"/>
+</iter>
+<iter>
+<var name="${i}">107</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rownum}</var>
+<arg>${${i} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231218 19:00:55.484" level="INFO">${rownum} = 108</msg>
+<status status="PASS" starttime="20231218 19:00:55.483" endtime="20231218 19:00:55.484"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_cola}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.485" level="INFO">${my_data_cola} = S5731-S24T4X</msg>
+<status status="PASS" starttime="20231218 19:00:55.484" endtime="20231218 19:00:55.485"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${my_data_colb}</var>
+<arg>row_num=${rownum}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231218 19:00:55.486" level="INFO">${my_data_colb} = LD2347004122</msg>
+<status status="PASS" starttime="20231218 19:00:55.485" endtime="20231218 19:00:55.486"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_a}</arg>
+<arg>${my_data_cola}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.486" endtime="20231218 19:00:55.486"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${my_data_as_list_b}</arg>
+<arg>${my_data_colb}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231218 19:00:55.486" endtime="20231218 19:00:55.487"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.483" endtime="20231218 19:00:55.487"/>
+</iter>
+<status status="PASS" starttime="20231218 19:00:55.028" endtime="20231218 19:00:55.487"/>
+</for>
+<kw name="Get Length" library="BuiltIn">
+<var>${lena}</var>
+<arg>${my_data_as_list_a}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231218 19:00:55.487" level="INFO">Length is 107</msg>
+<msg timestamp="20231218 19:00:55.488" level="INFO">${lena} = 107</msg>
+<status status="PASS" starttime="20231218 19:00:55.487" endtime="20231218 19:00:55.488"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${lenb}</var>
+<arg>${my_data_as_list_b}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231218 19:00:55.488" level="INFO">Length is 107</msg>
+<msg timestamp="20231218 19:00:55.488" level="INFO">${lenb} = 107</msg>
+<status status="PASS" starttime="20231218 19:00:55.488" endtime="20231218 19:00:55.489"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.489" endtime="20231218 19:00:55.489"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${my_data_as_list_a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.490" endtime="20231218 19:00:55.491"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.491" endtime="20231218 19:00:55.492"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${my_data_as_list_b}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.492" endtime="20231218 19:00:55.493"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Total length of list A: ${lena}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.494" endtime="20231218 19:00:55.494"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Total length of list B: ${lenb}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231218 19:00:55.494" endtime="20231218 19:00:55.495"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.018" endtime="20231218 19:00:55.495"/>
+</kw>
+<status status="PASS" starttime="20231218 19:00:55.018" endtime="20231218 19:00:55.495"/>
+</test>
+<status status="PASS" starttime="20231218 19:00:54.385" endtime="20231218 19:00:55.496"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Read Excel">Read Excel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
